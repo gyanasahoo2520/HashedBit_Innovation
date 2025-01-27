@@ -1,0 +1,132 @@
+/* General Body Styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Container for Movie List */
+.movie-list-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+  padding: 20px;
+}
+
+/* Movie Card Styling */
+.movie-card {
+  text-align: center;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+.movie-card h3 {
+  margin: 10px 0;
+}
+
+/* Movie Details Page */
+.movie-details-container {
+  text-align: center;
+  padding: 40px;
+}
+
+.movie-details-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.movie-details-container button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.movie-details-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Booking Form */
+.booking-form-container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form-container label {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.booking-form-container input {
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.booking-form-container button {
+  padding: 10px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.booking-form-container button:hover {
+  background-color: #218838;
+}
+
+/* Booking Confirmation */
+.confirmation-container {
+  text-align: center;
+  padding: 40px;
+}
+
+.confirmation-container h1 {
+  color: #28a745;
+  font-size: 2rem;
+}
+
+.confirmation-container button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.confirmation-container button:hover {
+  background-color: #0056b3;
+}

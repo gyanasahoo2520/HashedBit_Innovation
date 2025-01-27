@@ -1,0 +1,61 @@
+/* General Container Styling */
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f3f4f6;
+}
+
+/* Calculator Box */
+.calculator {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 320px;
+}
+
+/* Calculator Display */
+.calculator-display {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  text-align: right;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  background-color: #f9fafb;
+}
+
+/* Calculator Buttons */
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.button {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #2563eb;
+}
+
+.clear-button {
+  grid-column: span 4;
+  background-color: #ef4444;
+}
+
+.clear-button:hover {
+  background-color: #dc2626;
+}
