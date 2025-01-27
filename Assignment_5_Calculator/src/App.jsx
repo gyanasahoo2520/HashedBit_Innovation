@@ -2,14 +2,18 @@ import React, { useState } from "react";
 import "./App.css";
 
 const Calculator = () => {
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState("0");
 
   const handleClick = (value) => {
-    setInput((prev) => prev + value);
+    setInput((prev) => (prev === "0" ? value : prev + value));
   };
 
   const clearInput = () => {
-    setInput("");
+    setInput("0");
+  };
+
+  const clearLastEntry = () => {
+    setInput((prev) => (prev.length > 1 ? prev.slice(0, -1) : "0"));
   };
 
   const calculateResult = () => {
@@ -31,20 +35,21 @@ const Calculator = () => {
           className="calculator-display"
         />
         <div className="calculator-buttons">
-          {"7 8 9 / 4 5 6 * 1 2 3 - 0 . = +".split(" ").map((btn) => (
+          {/* Buttons */}
+          {"( ) C AC 7 8 9 / 4 5 6 * 1 2 3 - 0 . = +".split(" ").map((btn) => (
             <button
               key={btn}
-              onClick={() =>
-                btn === "=" ? calculateResult() : handleClick(btn)
-              }
-              className="button"
+              onClick={() => {
+                if (btn === "=") calculateResult();
+                else if (btn === "AC") clearInput();
+                else if (btn === "C") clearLastEntry();
+                else handleClick(btn);
+              }}
+              className={`button ${btn === "AC" ? "clear-button" : ""}`}
             >
               {btn}
             </button>
           ))}
-          <button onClick={clearInput} className="button clear-button">
-            Clear
-          </button>
         </div>
       </div>
     </div>
